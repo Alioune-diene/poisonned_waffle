@@ -3,7 +3,6 @@ package Model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class WaffleModel implements Serializable {
     // Constantes
@@ -132,14 +131,7 @@ public class WaffleModel implements Serializable {
     public void switchPlayer() {
         currentPlayer = (currentPlayer == 1) ? 2 : 1;
 
-        // Si c'est au tour de l'IA et que l'IA est activée
-        if (currentPlayer == 2 && isAIPlaying) {
-            // L'IA joue son coup
-            Move aiMove = aiPlayer.makeMove(aiLevel);
-            if (aiMove != null) {
-                makeMove(aiMove.getX(), aiMove.getY());
-            }
-        }
+        // Remove the AI move logic since the controller will handle it with delay
     }
 
     public boolean undoMove() {
@@ -191,7 +183,7 @@ public class WaffleModel implements Serializable {
             }
         }
 
-         // Définir le joueur courant
+        // Définir le joueur courant
         if (currentMoveIndex >= 0) {
             Move lastMove = moveHistory.get(currentMoveIndex);
             currentPlayer = (lastMove.getPlayer() == 1) ? 2 : 1;
@@ -212,6 +204,13 @@ public class WaffleModel implements Serializable {
         return aiPlayer.makeMove(3); // Utiliser l'IA de niveau avancé pour obtenir un bon coup
     }
 
+    // New method to get AI move without automatically applying it
+    public Move getAIMove() {
+        if (gameOver) {
+            return null;
+        }
+        return aiPlayer.makeMove(aiLevel);
+    }
 
     // Getters et setters
 
@@ -259,5 +258,9 @@ public class WaffleModel implements Serializable {
 
     public int getCurrentMoveIndex() {
         return currentMoveIndex;
+    }
+
+    public boolean isAIPlaying() {
+        return isAIPlaying;
     }
 }

@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cfd9c4a-402d-489e-928a-e91951e7c783" name="Changes" comment="Init">
+    <list default="true" id="3cfd9c4a-402d-489e-928a-e91951e7c783" name="Changes" comment="Updated `WafflePanel`.&#10;Added corners and borders to make the waffle more realistic.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/WaffleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/WaffleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/WaffleModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/WaffleModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/WafflePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/WafflePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +60,23 @@
       <option name="project" value="LOCAL" />
       <updated>1745143312585</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated `WafflePanel`.&#10;Added corners and borders to make the waffle more realistic.">
+      <option name="closed" value="true" />
+      <created>1745146735332</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1745146735332</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updated `WafflePanel`.&#10;Added corners and borders to make the waffle more realistic.">
+      <option name="closed" value="true" />
+      <created>1745146905033</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745146905033</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -73,6 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init" />
+    <MESSAGE value="Updated `WafflePanel`.&#10;Added corners and borders to make the waffle more realistic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated `WafflePanel`.&#10;Added corners and borders to make the waffle more realistic." />
   </component>
 </project>

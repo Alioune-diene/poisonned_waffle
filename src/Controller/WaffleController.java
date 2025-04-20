@@ -5,6 +5,8 @@ import Model.WaffleModel;
 import View.WaffleGameView;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.*;
 
 public class WaffleController {
@@ -30,8 +32,28 @@ public class WaffleController {
             boolean moveMade = model.makeMove(x, y);
             if (moveMade) {
                 updateView();
+
+                // Check if AI should play after player's move
+                if (model.getCurrentPlayer() == 2 && model.isAIPlaying()) {
+                    makeAIMoveWithDelay();
+                }
             }
         }
+    }
+
+    private void makeAIMoveWithDelay() {
+        ActionListener taskPerformer = new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                Move aiMove = model.getAIMove();
+                if (aiMove != null) {
+                    model.makeMove(aiMove.getX(), aiMove.getY());
+                    updateView();
+                }
+            }
+        };
+        Timer timer = new Timer(2000, taskPerformer);
+        timer.setRepeats(false);
+        timer.start();
     }
 
     public void undoMove() {
@@ -68,13 +90,7 @@ public class WaffleController {
 
         // Si l'IA est activée et c'est le tour du joueur 2, faire jouer l'IA
         if (aiPlaying && model.getCurrentPlayer() == 2) {
-            // Petit délai pour rendre le coup de l'IA plus naturel
-            new Timer(2000, evt -> {
-                ((Timer)evt.getSource()).stop();
-
-            }).start();
-            model.switchPlayer();
-            updateView();
+            makeAIMoveWithDelay();
         }
     }
 

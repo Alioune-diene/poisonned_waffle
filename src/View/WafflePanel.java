@@ -126,7 +126,7 @@ public class WafflePanel extends JPanel {
         }
 
         try {
-            waffleImageBottomRight = new ImageIcon(getClass().getResource("/resources/images/waffle_bottom_right.png")).getImage();
+            waffleImageBottomRight = new ImageIcon(getClass().getResource("/resources/images/waffle_bottom_right1.png")).getImage();
         } catch (Exception e) {
             e.printStackTrace();
         }
