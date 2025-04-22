@@ -22,7 +22,7 @@ public class WaffleModel implements Serializable {
     private int currentMoveIndex;
 
     // Pour l'IA
-    private AIPlayer aiPlayer;
+    private final AIPlayer aiPlayer;
     private boolean isAIPlaying;
     private int aiLevel;  // 1 = aléatoire, 2 = intermédiaire, 3 = avancé
 

@@ -1,10 +1,11 @@
 package Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class AIPlayer {
+public class AIPlayer implements Serializable {
     private final WaffleModel model;
     private final Random random;
 
